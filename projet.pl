@@ -15,6 +15,7 @@
    CFG produisant ces phrases :
    - phrase -> groupeNominal groupeVerbal
    - phrase -> nomPropre groupeVerbal
+   - phrase -> nomPropre
    - groupeNominal -> determinant nomCommun
    - groupeNominal -> determinant groupeSujet
    - groupeSujet -> nomCommun complementSujet
@@ -66,6 +67,17 @@ compSuj(X,Y) :- prnSuj(X,Z), gv(Z,Y).
 gv(X,Y) :- verbe(X,Z), gn(Z,Y).
 
 %ph([les,souris,fuient,les,chats,lesquels,pourchassent,les,souris],[]).
+%ph([tom,lequel,mange,des,souris,aime,jerry],[]).
+%ph([tom,pourchasse,la,souris,laquelle,s'appelle,jerry],[]).
+%ph([les,chats,pourchassent,les,souris,lesquelles,fuient,les,chats],[]).
+
+%ph([les,chats,lesquels,pourchassent,les,souris],[]).
+%ph([Tom,lequel,mange,des,souris],[]).
+%ph([la,souris,laquelle,s'appelle,jerry],[]).
+
+
+
+
 
 /*det(X,Y,m,sg) :- entre(X,Y,le).
 nom(X,Y,m,sg) :- entre(X,Y,chat).
